@@ -1,0 +1,11 @@
+services:
+  prod_web:
+    image: dima163163/clicker-frontend:${IMAGE_TAG}
+    container_name: prod_web
+    restart: unless-stopped
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    external: true

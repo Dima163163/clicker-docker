@@ -1,10 +1,11 @@
 services:
-  web:
-    image: nginx:stable-alpine
-    container_name: clicker_staging_web
-    ports:
-      - "8081:80"
-    volumes:
-      - ../../dist:/usr/share/nginx/html:ro
-      - ../../nginx-spa.conf:/etc/nginx/conf.d/default.conf:ro
+  staging_web:
+    image: dima163163/clicker-frontend:${IMAGE_TAG}
+    container_name: staging_web
     restart: unless-stopped
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    external: true
