@@ -1,4 +1,4 @@
 FROM jenkins/jenkins:lts-jdk17
 USER root
-RUN usemode -aG docker jenkins
+RUN usermod -aG docker jenkins
 USER jenkins
