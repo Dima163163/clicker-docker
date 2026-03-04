@@ -1,6 +1,6 @@
 services:
   staging_web:
-    image: dima163163/clicker-frontend:${IMAGE_TAG}
+    image: dima163sm/clicker-frontend:${IMAGE_TAG}
     container_name: staging_web
     restart: unless-stopped
     networks:

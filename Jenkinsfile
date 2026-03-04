@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    REGISTRY = "dima163163"
+    REGISTRY = "dima163sm"
     IMAGE_NAME = "clicker-frontend"
     IMAGE_TAG = "${env.GIT_COMMIT}"
     FULL_IMAGE = "${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}"
